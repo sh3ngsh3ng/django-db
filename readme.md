@@ -90,6 +90,12 @@ from django.db.models import Q
 Book.objects.filter(Q(rating__lte=7) | Q(title__contains='Tolkien'))
 ```
 
+## Ordering data
+```
+Book.objects.all().order_by("title")
+Book.objects.all().order_by("-title")
+```
+
 ## Bulk Operations
 - https://docs.djangoproject.com/en/3.1/topics/db/queries/#deleting-objects
 - https://docs.djangoproject.com/en/3.0/ref/models/querysets/#bulk-update
